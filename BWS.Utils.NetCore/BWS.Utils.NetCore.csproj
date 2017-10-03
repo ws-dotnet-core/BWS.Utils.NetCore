@@ -5,6 +5,11 @@
     <Description>The extensions for .net core 2.0</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIconUrl>https://github.com/ws-dotnet-core/BWS.Utils.NetCore/blob/master/icon.jpg?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/ws-dotnet-core/BWS.Utils.NetCore</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>asp.net core utils csharp</PackageTags>
+    <PackageProjectUrl>https://github.com/ws-dotnet-core/BWS.Utils.NetCore</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
