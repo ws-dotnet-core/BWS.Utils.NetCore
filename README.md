@@ -3,6 +3,9 @@
 
 A helpers for .NET Core / .Net Standard 2.0
 
+## Travis CI
+[![Build Status](https://travis-ci.org/ws-dotnet-core/BWS.Utils.NetCore.svg?branch=master)](https://travis-ci.org/ws-dotnet-core/BWS.Utils.NetCore)
+
 ## API List
 
 ### BWS.Utils.NetCore.Collections
