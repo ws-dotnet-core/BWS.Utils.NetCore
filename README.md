@@ -22,5 +22,5 @@ A helpers for .NET Core / .Net Standard 2.0
  3. class DateTimeHelper
  4. class RegexHelper
 
- ## BWS.Utils.NetCore.Seriailzation.ContractResolvers
+ ### BWS.Utils.NetCore.Seriailzation.ContractResolvers
  1. class LowcaseContractResolver
