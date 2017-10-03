@@ -5,12 +5,13 @@ using System.Text;
 using Newtonsoft.Json;
 
 namespace BWS.Utils.NetCore.Format {
+
     /// <summary>
-    /// 简单的 JSON 序列化 / 解序列化程序用于在两个进程之间传递消息
+    /// Json Helper.
     /// </summary>
     public static class JsonHelper {
         /// <summary>
-        /// 将可序列化的对象转换为 JSON
+        /// Object To json string.
         /// </summary>
         /// <typeparam name="T">Type of object</typeparam>
         /// <param name="data">Data model to convert to JSON</param>
@@ -24,7 +25,7 @@ namespace BWS.Utils.NetCore.Format {
         }
 
         /// <summary>
-        /// 将 JSON 转换成一个非序列化对象
+        /// String value to typed-instance.
         /// </summary>
         /// <typeparam name="T">Type to convert to</typeparam>
         /// <param name="json">JSON serialized object to convert from</param>
