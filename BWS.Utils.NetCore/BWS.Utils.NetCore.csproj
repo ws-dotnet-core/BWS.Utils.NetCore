@@ -10,7 +10,7 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>asp.net core utils csharp</PackageTags>
     <PackageProjectUrl>https://github.com/ws-dotnet-core/BWS.Utils.NetCore</PackageProjectUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

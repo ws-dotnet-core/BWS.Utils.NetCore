@@ -24,10 +24,6 @@ namespace BWS.Utils.NetCore.Expressions {
     /// </summary>
     public static class ExpressionTreesExtensions {
 
-        private static BinaryExpression CreateVisit<T>(Expression exp) {
-            return (BinaryExpression)new ParameterReplacer(Expression.Parameter(typeof(T))).Visit(exp);
-        }
-
         /// <summary>
         /// Union the filter with And method.
         /// </summary>
@@ -38,7 +34,7 @@ namespace BWS.Utils.NetCore.Expressions {
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2) {
             var param = Expression.Parameter(typeof(T));
             var body = Expression.AndAlso(expr1.Body, expr2.Body);
-            return Expression.Lambda<Func<T, bool>>(CreateVisit<T>(body), param);
+            return Expression.Lambda<Func<T, bool>>((BinaryExpression)new ParameterReplacer(param).Visit(body), param);
         }
 
         /// <summary>
@@ -51,8 +47,8 @@ namespace BWS.Utils.NetCore.Expressions {
         public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2) {
             var param = Expression.Parameter(typeof(T));
             var body = Expression.OrElse(expr1.Body, expr2.Body);
-            return Expression.Lambda<Func<T, bool>>(CreateVisit<T>(body), param);
+            return Expression.Lambda<Func<T, bool>>((BinaryExpression)new ParameterReplacer(param).Visit(body), param);
         }
-        
+
     }
 }
